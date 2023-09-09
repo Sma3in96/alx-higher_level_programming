@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
-    if tuple_a is None:
+    if tuple_a == ():
         return tuple_b
-    if tuple_b is None:
+    if tuple_b == ():
         return tuple_a
     temp = ()
     for i in range(0, 2):
