@@ -2,15 +2,13 @@
 
 
 def lookup(obj):
-    """
-    this function return all attrs and methods of a class
+    """This function return all attrs and methods of a class
 
-    args:
+    Args:
+        obj : class, object or module
 
-    obj : class, object or module
-
-    return:
-    all attrs and methods
+    Returns:
+        all attrs and methods
     """
 
     return dir(obj)
