@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-
-
 def lookup(obj):
     """This function return all attrs and methods of a class
 
