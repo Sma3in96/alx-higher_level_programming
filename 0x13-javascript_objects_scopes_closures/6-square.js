@@ -2,12 +2,8 @@
 const Squareo = require('./5-square');
 
 class Square extends Squareo {
-  constructor (size) {
-    super(size);
-  }
-
   charPrint (c) {
-    if ( c === undefined) {
+    if (c === undefined) {
       c = 'X';
     }
     for (let i = 0; i < this.height; i++) {
@@ -17,7 +13,7 @@ class Square extends Squareo {
       }
       console.log(str);
     }
-  } 
+  }
 }
 
 module.exports = Square;
