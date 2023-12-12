@@ -9,4 +9,6 @@ if (n) {
     }
     console.log(str1);
   }
+} else {
+  console.log('Missing size');
 }
