@@ -2,7 +2,7 @@
 const list = process.argv.slice(2);
 const x = parseInt(list[0]);
 function fact (n) {
-  if (n == 0 || isNaN(n)) {
+  if (n === 0 || isNaN(n)) {
     return 1;
   }
   return fact(n - 1) * n;
