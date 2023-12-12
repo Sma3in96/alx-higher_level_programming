@@ -1,7 +1,7 @@
 #!/usr/bin/node
 class Rectangle {
   constructor (w, h) {
-    if ( w > 0 && h > 0) {
+    if (w > 0 && h > 0) {
       this.width = w;
       this.height = h;
     } else {
@@ -11,7 +11,7 @@ class Rectangle {
   }
 
   print () {
-    let w = this.width, h = this.height;
+    const w = this.width; const h = this.height;
     for (let i = 0; i < h; i++) {
       let str = '';
       for (let j = 0; j < w; j++) {
@@ -22,9 +22,9 @@ class Rectangle {
   }
 
   rotate () {
-    let temp = this.width;
+    const temp = this.width;
     this.width = this.height;
-    this.height = temp; 
+    this.height = temp;
   }
 
   double () {
