@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """ select states"""
-from slqalchemy import create_engine, Table, Column, Integer, String, MetaData
+from sqlalchemy import create_engine, Table, Column, Integer, String, MetaData
 #from slqalchemy.ext.declarative import declarative_base
-from slqalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker
 from sys import argv
 
 
