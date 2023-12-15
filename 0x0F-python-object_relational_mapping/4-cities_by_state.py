@@ -10,7 +10,7 @@ if __name__ == '__main__':
                          db=sys.argv[3], port=3306)
 
     cur = db.cursor()
-    cur.execute("SELECT cities.id cities.name states.name \
+    cur.execute("SELECT cities.id, cities.name, states.name \
     FROM cities JOIN states ON cities.states_id = states.id;")
     result = cur.fetchall()
 
