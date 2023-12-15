@@ -14,5 +14,4 @@ if __name__ == '__main__':
     FROM cities JOIN states ON cities.states_id = states.id \
     WHERE states.name = %s;", (sys.argv[4],))
     result = cur.fetchall()
-
     print(", ".join([lis[0] for lis in result]))
