@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Lists all states from the database hbtn_0e_0_usa starts with "N"
+List all cities from a database
 """
 import sys
 import MySQLdb
@@ -11,8 +11,8 @@ if __name__ == '__main__':
 
     cur = db.cursor()
     cur.execute("SELECT cities.id, cities.name, states.name \
-    FROM cities JOIN states ON cities.states_id = states.id;")
-    result = cur.fetchall()
+    FROM cities JOIN states ON cities.state_id = states.id;")
+    states = cur.fetchall()
 
-    for i in result:
-        print(i)
+    for state in states:
+        print(state)
