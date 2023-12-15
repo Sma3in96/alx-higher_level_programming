@@ -1,21 +1,17 @@
 #!/usr/bin/python3
-""" select states"""
-from sys import argv
+"""
+Lists all states from the database hbtn_0e_0_usa
+"""
+import sys
 import MySQLdb
 
 if __name__ == '__main__':
-    # connect to database
-    username, password, database = argv[1:3]
-    db = MySQLdb.connect(user=username, passwd=password, db=database,
-                         port=3306)
+    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2],
+                         db=sys.argv[3], port=3306)
 
-    # set a cursor
-    c = db.cursor()
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states;")
+    states = cur.fetchall()
 
-    # sql querie
-    c.execute("""SELECT * FROM states;""")
-    states = c.fetchall()
-
-    # print results
-    for i in states:
-        print(i)
+    for state in states:
+        print(state)
