@@ -14,7 +14,7 @@ request(url, (error, response, body) => {
     for (const index in movies) {
       const cast = movies[index].characters;
       for (const ind in cast) {
-        if (cast[ind] === 'https://swapi-api.alx-tools.com/api/people/18/') {
+        if (cast[ind] == 'https://swapi-api.alx-tools.com/api/people/18/') {
           number++;
         }
       }
