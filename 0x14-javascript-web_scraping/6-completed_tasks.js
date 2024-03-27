@@ -11,13 +11,14 @@ request(url, (error, response, body) => {
   } else {
     const tasks = JSON.parse(body);
     const dict = {};
-    for (let i = 1; i <= 10; i++) {
-      dict[i] = 0;
-    }
     for (const task in tasks) {
       if (tasks[task].completed === true) {
         const index = tasks[task].userId;
-        dict[index]++;
+        if (dict[index]) {
+          dict[index]++;
+        } else {
+          dict[index] = 1;
+        }
       }
     }
     console.log(dict);
