@@ -10,16 +10,16 @@ request(url, (error, response, body) => {
     console.error('Status:', response.statusCode);
   } else {
     const tasks = JSON.parse(body);
-    const dict = {}
+    const dict = {};
     for (let i = 1; i <= 10; i++) {
-        dict[i] = 0
+      dict[i] = 0;
     }
     for (const task in tasks) {
-        if (tasks[task].completed === true) {
-            let index = tasks[task].userId
-            dict[index]++;
-        }
+      if (tasks[task].completed === true) {
+        const index = tasks[task].userId;
+        dict[index]++;
+      }
     }
-    console.log(dict)
+    console.log(dict);
   }
 });
